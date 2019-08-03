@@ -1,0 +1,13 @@
+Angular
+1. main.ts
+ bootStrapModule(ModuleName)->It loads here
+ 2. app.module.ts
+ export class ModuleName
+
+constructor(){
+     //called first time before the ngOnInit()
+  }
+
+  ngOnInit(){
+     //called after the constructor and called  after the first ngOnChanges() 
+  }
