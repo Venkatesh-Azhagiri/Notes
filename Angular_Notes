@@ -11,3 +11,7 @@ constructor(){
   ngOnInit(){
      //called after the constructor and called  after the first ngOnChanges() 
   }
+  
+  2. Import external css
+   add css in angular.css in style array
+   place the css in src/assets
