@@ -15,3 +15,13 @@ constructor(){
   2. Import external css
    add css in angular.css in style array
    place the css in src/assets
+
+
+ Very frequently we need to share data between components. There are various ways to share data between Angular components. These are:
+
+Using @Input()
+Using @Output()
+Using Services
+Parent component calling ViewChild
+Parent interacting with a child using a local variable
+Using Observable and Subject
