@@ -1,0 +1,20 @@
+@SessionAttributes annotation is used to store the model attribute in the session. This annotation is used at controller class level.
+
+@SessionAttributes("user")
+public class LoginController {
+
+	@ModelAttribute("user")
+	public User setUpUserForm() {
+		return new User();
+	}
+}
+In the above code snippet, the model attribute ‘user’ will be added to the session if the name attribute of the @ModelAttribute and @SessionAttributes annotations is same.
+ 
+@SessionAttribute annotation is used to retrieve the existing attribute from session that is managed globally and it is used at method parameter as shown follows.
+
+@GetMapping("/info")
+public String userInfo(@SessionAttribute("user") User user) {
+	//...
+	//...
+	return "user";
+}
