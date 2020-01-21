@@ -1,0 +1,4 @@
+Basic Authentication - No Expiration time and No user details only userId and password is used.
+
+JWT
+ 1. Custome token system - Both teams will understand, contain user details and authorization
