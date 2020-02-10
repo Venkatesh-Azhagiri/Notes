@@ -18,3 +18,8 @@ public String userInfo(@SessionAttribute("user") User user) {
 	//...
 	return "user";
 }
+
+
+Actuator vs Spring Boot Admin Server
+1. Actuators are great at inspecting individual Spring Boot applications, but when you have ‘n’ number of Spring Boot Services, the actuators are not easy.
+2. The Admin Server, exactly solves this problem. it is a server which provides UI based management and monitoring console for various Spring Boot Applications.
