@@ -1,0 +1,12 @@
+Docker container vs Docker Image
+Explanation with an example:
+
+Consider you have a game (iso) image in your computer.
+
+When you run (mount your image as a virtual drive), a virtual drive is created with all the game contents in the virtual drive and the game installation file is automatically launched. [Running your docker image - creating a container and then starting it.]
+
+But when you stop (similar to docker stop) it, the virtual drive still exists but stopping all the processes. [As the container exists till it is not deleted]
+
+And when you do start (similar to docker start), from the virtual drive the games files start its execution. [starting the existing container]
+
+In this example - The game image is your Docker image and virtual drive is your container.
