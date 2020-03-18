@@ -17,3 +17,4 @@ Docker run the image in detach mode with port:
  
  Docker execute the container and edit:
  docker exec -it [containerId] sh
+ Note that exec command works only on already running container. If the container is currently stopped, you need to first run it.
