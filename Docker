@@ -10,3 +10,10 @@ But when you stop (similar to docker stop) it, the virtual drive still exists bu
 And when you do start (similar to docker start), from the virtual drive the games files start its execution. [starting the existing container]
 
 In this example - The game image is your Docker image and virtual drive is your container.
+
+*********************
+Docker run the image in detach mode with port:
+ docker run -d -p 8080:8080 [imageId]
+ 
+ Docker execute the container and edit:
+ docker exec -it [containerId] sh
