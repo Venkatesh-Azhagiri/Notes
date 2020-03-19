@@ -18,3 +18,27 @@ Docker run the image in detach mode with port:
  Docker execute the container and edit:
  docker exec -it [containerId] sh
  Note that exec command works only on already running container. If the container is currently stopped, you need to first run it.
+ 
+ *********************
+ 
+docker pull alpine
+
+wget https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz --header "Referer: https://download.oracle.com"
+
+apk add maven
+mvn –version
+java –version
+Ubuntu:
+apt-get update
+ apt-get install wget
+
+https://www.journaldev.com/wp-content/uploads/2018/05/Spring-Boot-REST.zip
+
+1.	docker image build -t employee-producer .
+2.	docker container run -p 8080:8080 -d employee-producer
+3.	docker container exec -it f46dc0cbaccc /bin/sh
+4.	http://192.168.99.100:8080/employee
+
+
+ 
+ ********************
