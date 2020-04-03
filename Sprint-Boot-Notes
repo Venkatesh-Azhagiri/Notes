@@ -26,3 +26,7 @@ Actuator vs Spring Boot Admin Server
 
 
 SpringBootServletInitializer is an extension of WebApplicationInitializer which runs a SpringApplication from a traditional WAR archive deployed on a web container. This class binds Servlet, Filter and ServletContextInitializer beans from the application context to the server.
+
+Grace Shutdown:
+Let’s consider this scenario — there’s an application that has a long blocking process. Along with that, this app needs to be shut down and replaced with a newer version. Wouldn't it be nice if, instead of killing all the connections, it just gracefully waited to finish before the shutdown?
+https://www.youtube.com/watch?v=NQTqMO4lG_Y
