@@ -25,3 +25,33 @@ Using Services
 Parent component calling ViewChild
 Parent interacting with a child using a local variable
 Using Observable and Subject
+
+
+****************
+navigateByUrl is similar to changing the location bar directly–we are providing the “whole” new URL. Whereas router. navigate creates a new URL by applying an array of passed-in commands, a patch, to the current URL.
+
+
+queryParametes and optional parameters are not configured in the route configuration
+ActivatedRoute  vs ActivatedRouteSnapshot 
+
+Use the Snapshot if you only need the initial value of the parameter once during the component's initialization, and don't expect the URL to change while the user is still on that same component
+
+description
+
+The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialisation of fields in the class and its subclasses. Angular, or better Dependency Injector (DI), analyses the constructor parameters and when it creates a new instance by calling new MyClass() it tries to find providers that match the types of the constructor parameters, resolves them and passes them to the constructor like
+
+new MyClass(someArg);
+ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component.
+
+export class App implements OnInit {
+  constructor() {
+     // Called first time before the ngOnInit()
+  }
+
+  ngOnInit() {
+     // Called after the constructor and called  after the first ngOnChanges() 
+  }
+}
+https://stackoverflow.com/questions/35763730/difference-between-constructor-and-ngoninit
+
+*****************************
