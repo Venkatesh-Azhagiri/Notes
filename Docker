@@ -35,10 +35,22 @@ apt-get update
 https://www.journaldev.com/wp-content/uploads/2018/05/Spring-Boot-REST.zip
 
 1.	docker image build -t employee-producer .
-2.	docker container run -p 8080:8080 -d employee-producer
-3.	docker container exec -it f46dc0cbaccc /bin/sh
+2.	docker run -p 8080:8080 -d employee-producer
+3.	docker exec -it f46dc0cbaccc /bin/sh
 4.	http://192.168.99.100:8080/employee
 
 
  
  ********************
+ 
+ The docker run doc does mention:
+
+The docker run command first creates a writeable container layer over the specified image, and then starts it using the specified command.
+
+That is, docker run is equivalent to the API /containers/create then /containers/(id)/start.
+
+Run: create a new container of an image, and execute the container. You can create N clones of the same image. The command is: docker run IMAGE_ID and not docker run CONTAINER_ID
+
+Start: Launch a container previously stopped. For example, if you had stopped a database with the command docker stop CONTAINER_ID, you can relaunch the same container with the command docker start CONTAINER_ID, and the data and settings will be the same.
+
+********************
