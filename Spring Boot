@@ -1,0 +1,7 @@
+1. Spring Boot Actuator monitor metrics, heapdump, mappings, env, trace, health. Adding HAL browser dependency provide
+GUI in browser.
+2. Spring boot devtools livereload can be disable using the property spring.devtools.livereload=false in application.properties.
+3. Spring boot content negotation default is json if its required in XML add dependency jacksondata format xml
+and in header add Accept= application/xml
+4. Embedded tomcat will spring-boot-starter-web dependency. If you want to remove tomcat in the spring-boot-start-web dependency add the exclusion as spring-boot-starter-tomcat
+

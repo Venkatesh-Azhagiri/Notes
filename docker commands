@@ -1,0 +1,25 @@
+docker volume create data_volume1
+docker run -it -v data_volume1:/store/file busybox
+docker system df
+docker info
+
+docker system prune
+docker images purge
+docker logs containerId
+docker rmi $(docker images -a -q)
+
+Approach 1 without using docker-compose.yml in consumer project
+1.docker network create consumer-producer
+2.docker run -p 8080:8080 -d --network consumer-producer --name producer ImageId
+3.docker run -p 8081:8081 -d --network consumer-producer --name consumer ImageId
+
+Approach 2:
+docker-compose up --build
+
+docker commit containerId dockerhubrepo/[name]
+
+docker push dockerhubrepo/[name]
+
+*******************
+
+docker build https://github.com/venkatesh-buddy/Angular.git#:basic-auth/

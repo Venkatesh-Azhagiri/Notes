@@ -1,0 +1,17 @@
+Design Patterns:
+
+1. Builder Pattern:
+
+remove the public constructor from the BankAccount class and replace it with a private constructor so that accounts can only be created via the builder. 
+
+create a complex object and its complex parts.
+
+there are two specific problems that we need to solve:
+
+Too many constructor arguments.
+Incorrect object state.
+
+With the Factory pattern, you produce instances of implementations (Apple, Banana, Cherry, etc.) of a particular interface -- say, IFruit.
+
+With the Abstract Factory pattern, you provide a way for anyone to provide their own factory. This allows your warehouse to be either an IFruitFactory or an IJuiceFactory, without requiring your warehouse to know anything about fruits or juices.
+Abstract Factory: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.

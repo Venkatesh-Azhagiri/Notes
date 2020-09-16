@@ -1,0 +1,90 @@
+kubectl get services
+kubectl get pods
+kubectl get all
+kubectl get deployments
+kubectl describe services
+kubectl describe services <service-name>
+
+expose the service:
+minikube.exe service <service-name>
+
+
+Pods:
+Pod IP, memory, volumes, etc.
+shared across containers.
+
+Scale horizontally by adding Pod replicas
+
+Each Pod can live or die
+Each Pod can have one or more containers
+
+Port forwarding for pod is usefull for analysis or debugging the performance of pod.
+
+Kubectl port-forward [name-of-pod] 8080:80
+
+ # Will cause pod to be recreated
+kubectl delete pod [name-of-pod] 
+
+# Delete Deployment that manages the Pod
+kubectl delete deployment [name-of-deployment]
+
+kubectl run [name-of-pod] --image=[image name]
+
+kubectl get pod [name-of-pod] -o yaml
+
+kubectl describe pod [name-of-pod] 
+kubectl exec [name-of-pod] -it sh
+kubectl get componentstatuses
+
+kubectl create deployment  quotes --image=venkatesh88a/programmingquotes
+kubectl expose deployment quotes --type=LoadBalancer --port=8080
+
+Probes:
+Pod health
+
+Types of Probe:
+  1. Liveness - Is used to determine if pod is healthy and running as expected.
+  2. Readiness - If the pod is ready to receive the request
+Both of them uses
+	1.  Execaction - Execute the action inside the container.
+	2. TCPSocketAction - TCP check against the container ip address on a specified port
+	3. HttpGetAction - Http Get request against container
+  
+
+Declarative vs Imperative
+
+In an imperative system, the user is responsible for knowing how to drive the system to the desired state, whereas in a declarative system, the system is responsible for knowing how to drive itself to the desired state.
+
+Hands on kubernetes windows -Oreilly
+Kubernetes High level architecture
+
+
+Cloud native Devops-Oreilly
+Image pull policy
+
+
+https://kubernetesbyexample.com/
+
+Save config:
+ annotations under metadata
+ 
+ Pods can be created and destroyed but are never
+ re-created
+ 
+ What happens if a pod is destroyed?
+ Deployments and Replicasets ensure pods stay running 
+ and can be used to scale Pods
+ 
+ 
+ 
+ Creating a Service
+So we have pods running nginx in a flat, cluster wide, address space. In theory, you could talk to these pods directly, but what happens when a node dies? The pods die with it, and the Deployment will create new ones, with different IPs. This is the problem a Service solves.
+
+A Kubernetes Service is an abstraction which defines a logical set of Pods running somewhere in your cluster, that all provide the same functionality. When created, each Service is assigned a unique IP address (also called clusterIP). This address is tied to the lifespan of the Service, and will not change while the Service is alive. Pods can be configured to talk to the Service, and know that communication to the Service will be automatically load-balanced out to some pod that is a member of the Service.
+
+
+Volumes:
+Volume is used to hold data and state for pods and containers.
+
+https://www.alibabacloud.com/blog/kubernetes-volume-basics-emptydir-and-persistentvolume_594834
+
