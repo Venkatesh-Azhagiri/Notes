@@ -1,0 +1,11 @@
+Java:
+ Thread:
+ 
+   @Async:
+   https://questionsforinterview.in/multi-threading-with-springboot-framework/
+   
+   https://javarevisited.blogspot.com/2017/02/difference-between-executor-executorservice-and-executors-in-java.html
+   
+  Coupling and Cohesion:
+	https://www.decodejava.com/coupling-cohesion-java.htm
+   

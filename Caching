@@ -1,0 +1,16 @@
+
+There are four types of data storage supported by EhCache:
+
+On-Heap Store
+Off-Heap Store
+Disk Store
+Clustered Store
+
+There are two types of topologies we can implement with Hazelcast:
+
+embedded cache topology, and
+client-server topology.
+
+
+ disable the cache in a certain environment
+ spring.cache.type=none  

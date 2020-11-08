@@ -1,0 +1,14 @@
+C:\softwares\kafka_2.13-2.6.0\bin\windows>zookeeper-server-start.bat C:\kafka_2.12-2.0.0\config\zookeeper.properties
+
+.\kafka-server-start.bat  C:\softwares\kafka_2.13-2.6.0\config\server.properties
+
+C:\softwares\kafka_2.13-2.6.0\bin\windows>kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-kafka-venkatesh
+
+Created topic test-kafka-venkatesh.
+
+C:\softwares\kafka_2.13-2.6.0\bin\windows>kafka-console-producer.bat --broker-list localhost:9092 --topic test-kafka-venkatesh
+>Hi Venkatesh Kafka Producer example
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic javainuse-topic --from-beginning
+
+Zookeeper keeps track of status of the Kafka cluster nodes and it also keeps track of Kafka topics, partitions etc. Zookeeper it self is allowing multiple clients to perform simultaneous reads and writes and acts as a shared configuration service within the system
