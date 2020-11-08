@@ -1,0 +1,5 @@
+Enable container registry api for the project in the google cloud
+Goto project activate console
+docker pull [USER-NAME]/[IMAGE]
+docker tag [IMAGE-ID]  gcr.io/[PROJECT-ID]/[IMAGE-ID]
+docker push gcr.io/[PROJECT-ID]/[IMAGE-ID]
